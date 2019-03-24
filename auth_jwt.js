@@ -3,7 +3,7 @@ var JwtStrategy=require("passport-jwt").Strategy;
 var ExtractJwt=require('passport-jwt').ExtractJwt;
 mongoose=require('mongoose');
 
-mongoose.connect("mongodb://localhost/movieDB");
+mongoose.connect("mongodb+srv://root:bogas@cluster0-qbpkm.mongodb.net/test?retryWrites=true");
 var User=require("./models/user")
 var opts={};
 opts.jwtFromRequest=ExtractJwt.fromAuthHeaderWithScheme("jwt");

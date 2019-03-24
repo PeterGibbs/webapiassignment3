@@ -10,7 +10,10 @@ var authJwtController=require('./auth_jwt');
 //var authController=require('./auth');
 mongoose=require('mongoose');
 
-mongoose.connect("mongodb://localhost/movieDB");
+mongoose.connect("mongodb+srv://root:bogas@cluster0-qbpkm.mongodb.net/test?retryWrites=true",(err,db)=>{
+    if (err) throw err;
+    console.log("connect to db")
+});
 var User=require("./models/user");
 var Movie=require("./models/movie");
 var jwt=require('jsonwebtoken');
